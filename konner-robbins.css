@@ -44,14 +44,14 @@ p {
     padding: 10px;
 }
 
-.center {
+.about {
     margin: auto;
     width: 85%;
     border: 3px solid #73AD21;
     padding: 1px;
 }
   .hobbies {
-    margin: auto;
+    margin: 30px, 50px;
     width: 85%;
     border: 3px solid #73AD21;
     padding: 1px;
