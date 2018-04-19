@@ -1,0 +1,65 @@
+body {
+    background-color: #48D1CC;
+    font-family: monospace;
+
+}
+
+h1 {
+    line-height: .03;
+    color: whitesmoke;
+    font-size: 75px;
+    text-align: center;
+    
+    
+}
+
+img {
+    margin: auto;
+    display: block;
+    width: 75%;
+    border-style: groove;
+    border-color: whitesmoke;
+}
+
+table {
+    width: 75%;
+    text-align: center; 
+    font-size: 25px;
+    border-color: whitesmoke;
+
+}
+
+p {
+    font-family: monospace;
+    color: whitesmoke;
+}
+
+
+.about {
+    margin: 35px 75px;
+    width: 85%;
+    border: 3px solid #73AD21;
+    
+}
+
+.hobbies {
+    margin: 35px 65px;
+    padding: inherit;
+    float: right;
+    width: 1200px;
+    border: 3px solid #73AD21;
+    
+}
+
+.life {
+    margin: 35px 65px;
+    padding: inherit;
+    float; left;
+    width: 1200px;
+    border: 3px solid #73AD21;
+    
+}
+
+.field {
+   
+}
