@@ -43,6 +43,16 @@ img {
     
 }
 
+.feild {
+    margin: auto;
+
+}
+
+.video {
+    margin: auto;
+
+}
+
 
 p {
     margin: 5px;
@@ -58,3 +68,5 @@ p {
     border: 3px solid #73AD21;
     
 }
+
+
