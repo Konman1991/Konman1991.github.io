@@ -7,13 +7,13 @@ body {
 table, td {
     margin: auto;
     border: 2px solid;
-    border-color: #14A76C;
+    border-color: #86C232;
     
 
 }
 
 td {
-    color: #86C232;
+    color: #14A76C;
     padding: 10px;
     
 }
