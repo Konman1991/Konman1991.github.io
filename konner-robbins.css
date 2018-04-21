@@ -7,21 +7,20 @@ body {
 table, td {
     margin: auto;
     border: 2px solid;
-    border-color: whitesmoke;
+    border-color: #14A76C;
     
 
 }
 
 td {
+    color: #86C232;
     padding: 10px;
     
 }
 
-
-
 h1 {
     line-height: .03;
-    color: whitesmoke;
+    color: #14A76C;
     font-size: 75px;
     text-align: center;
     
@@ -29,11 +28,11 @@ h1 {
 }
 
 img {
-    margin: 10px;
+    margin-bottom: 15px;
     display: block;
     width: 75%;
     border-style: groove;
-    border-color: whitesmoke;
+    border-color: #14A76C;
 }
 
 .me {
@@ -59,9 +58,10 @@ img {
 
 
 p {
+    padding: 15px;
     margin: 5px;
     font-family: monospace;
-    color: whitesmoke;
+    color: #86C232;
 }
 
 
