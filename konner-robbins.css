@@ -50,7 +50,8 @@ img {
 
 .video {
     margin: auto;
-
+    display: block;
+    text-align: center;
 }
 
 
