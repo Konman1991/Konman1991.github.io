@@ -43,12 +43,11 @@ img {
     
 }
 
-
-
 .video, .field {
     margin: auto;
     display: block;
     text-align: center;
+    
 }
 
 
@@ -74,5 +73,7 @@ div.sticky {
   text-align: right;
   padding: 5px;
   margin; 35px 65px;
+  
+  
 }
 
