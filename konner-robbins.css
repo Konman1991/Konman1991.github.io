@@ -22,11 +22,16 @@ td {
     color: #14A76C;
 }
 
-h1 {
+h1, h2{
     line-height: .03;
     color: #14A76C;
     font-size: 75px;
     text-align: center;
+    
+    
+}
+
+h2 {
     
     
 }
@@ -55,7 +60,9 @@ img {
 }
 
 .video, .field {
+    
     margin: auto;
+    
     text-align: center;
     
 }
@@ -68,8 +75,12 @@ p {
     color: #86C232;
 }
 
+{
+    font-size: 25px;
+}
 
-.about, .hobbies, .life, .clearfix {
+
+.about, .hobbies, .life, .clearfix, .image, .nav {
     overflow: auto;
     margin: 35px 65px;
     width: 1200;
@@ -86,3 +97,4 @@ div.sticky {
   
   
 }
+
