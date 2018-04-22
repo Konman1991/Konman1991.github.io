@@ -8,14 +8,18 @@ table, td {
     margin: auto;
     border: 2px solid;
     border-color: #86C232;
+    text-align: center;
     
 
 }
 
 td {
-    color: #14A76C;
     padding: 10px;
     
+}
+
+.lable {
+    color: #14A76C;
 }
 
 h1 {
@@ -32,6 +36,7 @@ img {
     display: block;
     width: 75%;
     border: 6px solid #14A76C;
+   
 }
 
 .me {
@@ -50,35 +55,3 @@ img {
 }
 
 .video, .field {
-    margin: auto;
-    text-align: center;
-    
-}
-
-
-p {
-    padding: 15px;
-    margin: 5px;
-    font-family: monospace;
-    color: #86C232;
-}
-
-
-.about, .hobbies, .life, .clearfix {
-    overflow: auto;
-    margin: 35px 65px;
-    width: 1200;
-    border: 5px solid #73AD21;
-    
-}
-
-div.sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  text-align: right;
-  padding: 5px;
-  
-  
-}
-
