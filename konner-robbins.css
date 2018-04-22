@@ -31,8 +31,7 @@ img {
     margin-bottom: 15px;
     display: block;
     width: 75%;
-    border-style: groove;
-    border-color: #14A76C;
+    border: 6px solid #14A76C;
 }
 
 .me {
