@@ -1,4 +1,4 @@
-body {
+ body {
     background-color: #272727;
     font-family: monospace;
 
@@ -55,3 +55,34 @@ img {
 }
 
 .video, .field {
+    margin: auto;
+    text-align: center;
+    
+}
+
+
+p {
+    padding: 15px;
+    margin: 5px;
+    font-family: monospace;
+    color: #86C232;
+}
+
+
+.about, .hobbies, .life, .clearfix {
+    overflow: auto;
+    margin: 35px 65px;
+    width: 1200;
+    border: 3px solid #73AD21;
+    
+}
+
+div.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  text-align: right;
+  
+  
+  
+}
