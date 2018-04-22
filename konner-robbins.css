@@ -51,6 +51,7 @@ img {
 }
 
 .video, .field {
+    border-color: #14A76C;
     margin: auto;
     display: block;
     text-align: center;
