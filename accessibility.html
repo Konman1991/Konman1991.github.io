@@ -6,8 +6,97 @@
         <link rel="stylesheet" type="text/css" href="konner-robbins.css">
     </head>
     
-    
+
  <body>
+     
+     <canvas id="canvas" width="200" height="200">
+</canvas>
+
+<script>   
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = '#272727';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*0);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.125, '#86C232');
+  grad.addColorStop(0.25, '#333');
+  grad.addColorStop(0.375, '#86C232');
+  grad.addColorStop(0.5, '#333');
+  grad.addColorStop(0.625, '#86C232');
+  grad.addColorStop(0.75, '#333');
+  grad.addColorStop(0.875, '#86C232');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.beginPath();
+  ctx.fillStyle = '#86C232';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+</script>
      
 <div class="sticky">
 	<p style="font-size: 170%; clear: left;">
@@ -26,20 +115,24 @@
 	Accessibility and Usability
 </h1>
      
+<!-- Table with links (line 29-50) -->
 <table>
 	<tbody>
 		<tr style="font-size: 220%;">
 			<td>
-				<a class="lable">
+                <!-- Goes to part 1 -->
+				<a class="lable" href="#P1">
 					Images
 				</a>
 			</td>
 			<td>
-				<a class="lable">
-					Site Nav.
+                <!-- Goes to Part 2 -->
+				<a class="lable" href="#P2">
+					Site Navigation
 				</a>
 			</td>
 			<td>
+                <!-- Link back to portfolio -->
 				<a class="lable" href="index.html">
 					Konner's Portfolio
 				</a>
@@ -48,7 +141,7 @@
 	</tbody>
 </table>
      
-<h2>
+<h2 id="P1">
 	Images
 </h2>
      
@@ -56,7 +149,7 @@
 	The images are given alternative text discription of the image in case of the picture not loading or is not supported be the browser.
 </p>
      
-<h2>
+<h2 id="P2">
 	Site Navigation
 </h2>
      
@@ -64,5 +157,15 @@
 	At the top of the site there are links that instanlty bring you to that location of the site without scrolling. There is also a link that stays at the top of the window as you scroll through the site when clicked on with instanly bring back to the top of the site.
 </p>
      
-    </body>
+<h3>
+          <object align="left">
+           <p>Just for fun, here are sound dogs howling.</p>
+            <audio controls>
+                <source src="dogs howling.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+          </object>
+</h3>
+
+</body>
 </html>
