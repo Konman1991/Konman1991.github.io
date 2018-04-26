@@ -20,23 +20,38 @@
 function myFunction() {
     var x = document.getElementById("fn").value;
     var w1 = document.getElementById("fn"); 
-    var x = document.getElementById("ln").value;
+    var y = document.getElementById("ln").value;
     var w2 = document.getElementById("ln");  
     
     if (x === 'a') {
         w1 = "White";
-        w2 = "Hunter";
+        
     }
     else if (x === 'b') {
         w1 = "Lone";
-        w2 = "Demon";
+        
     }
     else if (x === 'c') {
         w1 = "Ravenous";
-        w2 = "Howler";
+        
     }
     else {
         w1 = "Not a letter"; 
+       
+    }
+    if (y === 'a') {
+       
+        w2 = "Hunter";
+    }
+    else if (y === 'b') {
+        
+        w2 = "Demon";
+    }
+    else if (y === 'c') {
+       
+        w2 = "Howler";
+    }
+    else { 
         w2 = "Not a letter";
     }
 document.getElementById("N1").innerHTML = w1;
