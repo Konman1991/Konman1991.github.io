@@ -72,6 +72,8 @@ img {
     border: 6px solid #14A76C;
    
 }
+.img-circle {
+    border-radius: 100%;
 
 .me {
     margin: auto;
