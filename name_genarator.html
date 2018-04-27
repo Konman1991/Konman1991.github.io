@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <head>
+        <title>Konner's Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="konner-robbins.css">
+    </head>
+    
+<body>
+    
+<h1>Werewolf Name Generator</h1>
+    <p style="font-size: 220%; text-align:center;">Type the first letter of your first and last name into the boxes below.</p>
+<div class="input">
+    <input type="text" id="fn">
+    <input type="text" id="ln">
+    <button onclick="myFunction()">Create</button>
+</div>
+<div class="output"> 
+    <!-- Input for firsy name is displayed -->
+    <p id="N1" style="font-size: 520%; text-align:center;">First</p>
+    <!-- Output for last name is displayed -->
+    <p id="N2" style="font-size: 520%; text-align:center;">Last</p>
+</div>
+    
+<script>
+function myFunction() {
+    var x = document.getElementById("fn").value;
+    var w1 = document.getElementById("fn"); 
+    var y = document.getElementById("ln").value;
+    var w2 = document.getElementById("ln");  
+    
+    if (x === 'a') {
+        w1 = "White";
+        
+    }
+    else if (x === 'b') {
+        w1 = "Lone";
+        
+    }
+    else if (x === 'c') {
+        w1 = "Ravenous";
+        
+    }
+    else if (x === 'd') {
+        w1 = "Ancient";
+        
+    }
+    else if (x === 'e') {
+        w1 = "Magic";
+        
+    }
+    else if (x === 'f') {
+        w1 = "Ebony";
+        
+    }
+    else if (x === 'g') {
+        w1 = "Dark";
+        
+    }
+    else if (x === 'h') {
+        w1 = "Savage";
+        
+    }
+    else if (x === 'i') {
+        w1 = "Regal";
+        
+    }
+    else if (x === 'j') {
+        w1 = "Rogue";
+        
+    }
+    else if (x === 'k') {
+        w1 = "Scarlet";
+        
+    }
+    else if (x === 'l') {
+        w1 = "Fierce";
+        
+    }
+    else if (x === 'm') {
+        w1 = "Alpha";
+        
+    }
+    else if (x === 'n') {
+        w1 = "Beautiful";
+        
+    }
+    else if (x === 'o') {
+        w1 = "Blood";
+        
+    }
+    else if (x === 'p') {
+        w1 = "Moon";
+        
+    }
+    else if (x === 'q') {
+        w1 = "Loyal";
+        
+    }
+    else if (x === 'r') {
+        w1 = "Scarred";
+        
+    }
+    else if (x === 's') {
+        w1 = "Grey";
+        
+    }
+    else if (x === 't') {
+        w1 = "Mystic";
+        
+    }
+    else if (x === 'u') {
+        w1 = "Prime";
+        
+    }
+    else if (x === 'v') {
+        w1 = "Graceful";
+        
+    }
+    else if (x === 'w') {
+        w1 = "Majestic";
+        
+    }
+    else if (x === 'x') {
+        w1 = "Wild";
+        
+    }
+    else if (x === 'y') {
+        w1 = "Vengeful";
+        
+    }
+    else if (x === 'z') {
+        w1 = "Cruel";
+        
+    }
+    else {
+        w1 = "Not a letter";
+        
+    }
+    if (y === 'a') {
+        w2 = "Hunter";
+        
+    }
+    else if (y === 'b') {
+        w2 = "Demon";
+        
+    }
+    else if (y === 'c') {
+        w2 = "Howler";
+        
+    }
+    else if (y === 'd') {
+        w2 = "Rain";
+        
+    }
+    else if (y === 'e') {
+        w2 = "Red";
+        
+    }
+    else if (y === 'f') {
+        w2 = "Shadow";
+        
+    }
+    else if (y === 'g') {
+        w2 = "Storm";
+        
+    }
+    else if (y === 'h') {
+        w2 = "Beast";
+        
+    }
+    else if (y === 'i') {
+        w2 = "Bane";
+        
+    }
+    else if (y === 'j') {
+        w2 = "Dagger";
+        
+    }
+    else if (y === 'k') {
+        w2 = "Hound";
+        
+    }
+    else if (y === 'l') {
+        w2 = "Fang";
+        
+    }
+    else if (y === 'm') {
+        w2 = "Claw";
+        
+    }
+    else if (y === 'n') {
+        w2 = "Wolf";
+        
+    }
+    else if (y === 'o') {
+        w2 = "Crescent";
+        
+    }
+    else if (y === 'p') {
+        w2 = "Paw";
+        
+    }
+    else if (y === 'q') {
+        w2 = "Lupus";
+        
+    }
+    else if (y === 'r') {
+        w2 = "Fire";
+        
+    }
+    else if (y === 's') {
+        w2 = "Temptress";
+        
+    }
+    else if (y === 't') {
+        w2 = "Warrior";
+        
+    }
+    else if (y === 'u') {
+        w2 = "Rage";
+        
+    }
+    else if (y === 'v') {
+        w2 = "Thorn";
+        
+    }
+    else if (y === 'w') {
+        w2 = "Moon";
+        
+    }
+    else if (y === 'x') {
+        w2 = "Lupe";
+        
+    }
+    else if (y === 'y') {
+        w2 = "Vixen";
+        
+    }
+    else if (y === 'z') {
+        w2 = "Omega";
+        
+    }
+    else {
+        w2 = "Not a letter";
+        
+    } 
+document.getElementById("N1").innerHTML = w1;
+document.getElementById("N2").innerHTML = w2;
+}
+    </script>
+    </body>
+</html>
