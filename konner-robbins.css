@@ -6,7 +6,7 @@
 
 /*table grid for lables*/
 table, td {
-    
+    margin: auto;
     border: 2px solid;
     border-color: #86C232;
     text-align: center;
