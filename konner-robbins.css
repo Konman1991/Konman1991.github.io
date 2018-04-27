@@ -1,4 +1,4 @@
- body {
+  body {
     background-color: #272727;
     font-family: monospace;
 
@@ -6,7 +6,7 @@
 
 /*table grid for lables*/
 table, td {
-    margin: auto;
+    
     border: 2px solid;
     border-color: #86C232;
     text-align: center;
@@ -14,7 +14,42 @@ table, td {
 
 td {
     padding: 10px;
+}
+
+/*name generator*/
+.input {
+    background-color: lightgray;
+    width: 300px;
+    padding: 25px;
+    margin: auto;
+    border: 25px solid;
+    border-color: #86C232;
+    text-align: center;
+}
+#N1, #N2{
+    background-color: lightgray;
+    width: 400px;
+    margin: auto;
+    margin-top: 20px;
+    border: 25px solid;
+    border-color: #86C232;
+    text-align: center;
+}
+
+#N1, #N2, .output {
     
+}
+#N1{
+    float: left;
+    padding: 10px;
+    margin-left: 225px;
+    text-align: right;
+}
+#N2 {
+    float: right;
+    padding: 10px; 
+    margin-right: 225px;
+    text-align: left;
 }
 
 /*Lable colors*/
@@ -78,6 +113,6 @@ div.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  text-align: right;
+  text-align: right; 
 }
 
