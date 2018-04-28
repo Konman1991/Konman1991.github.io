@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    
+    <head>
+        <title>Konner's Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="konner-robbins.css">
+    </head>
+    
+    <body onload="startTime()">
+        
+        <canvas id="canvas" width="250" height="250">
+</canvas>
+
+<script>   
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+var radius = canvas.height / 2;
+ctx.translate(radius, radius);
+radius = radius * 0.90
+setInterval(drawClock, 1000);
+
+function drawClock() {
+  drawFace(ctx, radius);
+  drawNumbers(ctx, radius);
+  drawTime(ctx, radius);
+}
+
+function drawFace(ctx, radius) {
+  var grad;
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, 2*Math.PI);
+  ctx.fillStyle = '#272727';
+  ctx.fill();
+  grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*0);
+  grad.addColorStop(0, '#333');
+  grad.addColorStop(0.125, '#86C232');
+  grad.addColorStop(0.25, '#333');
+  grad.addColorStop(0.375, '#86C232');
+  grad.addColorStop(0.5, '#333');
+  grad.addColorStop(0.625, '#86C232');
+  grad.addColorStop(0.75, '#333');
+  grad.addColorStop(0.875, '#86C232');
+  grad.addColorStop(1, '#333');
+  ctx.strokeStyle = grad;
+  ctx.lineWidth = radius*0.1;
+  ctx.beginPath();
+  ctx.fillStyle = '#86C232';
+  ctx.fill();
+}
+
+function drawNumbers(ctx, radius) {
+  var ang;
+  var num;
+  ctx.font = radius*0.15 + "px arial";
+  ctx.textBaseline="middle";
+  ctx.textAlign="center";
+  for(num = 1; num < 13; num++){
+    ang = num * Math.PI / 6;
+    ctx.rotate(ang);
+    ctx.translate(0, -radius*0.85);
+    ctx.rotate(-ang);
+    ctx.fillText(num.toString(), 0, 0);
+    ctx.rotate(ang);
+    ctx.translate(0, radius*0.85);
+    ctx.rotate(-ang);
+  }
+}
+
+function drawTime(ctx, radius){
+    var now = new Date();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+    var second = now.getSeconds();
+    //hour
+    hour=hour%12;
+    hour=(hour*Math.PI/6)+
+    (minute*Math.PI/(6*60))+
+    (second*Math.PI/(360*60));
+    drawHand(ctx, hour, radius*0.5, radius*0.07);
+    //minute
+    minute=(minute*Math.PI/30)+(second*Math.PI/(30*60));
+    drawHand(ctx, minute, radius*0.8, radius*0.07);
+    // second
+    second=(second*Math.PI/30);
+    drawHand(ctx, second, radius*0.9, radius*0.02);
+}
+
+function drawHand(ctx, pos, length, width) {
+    ctx.beginPath();
+    ctx.lineWidth = width;
+    ctx.lineCap = "round";
+    ctx.moveTo(0,0);
+    ctx.rotate(pos);
+    ctx.lineTo(0, -length);
+    ctx.stroke();
+    ctx.rotate(-pos);
+}
+        
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+</script>
+
+        
+<div class="sticky">
+	<p style="font-size: 170%; clear: left;">
+		<a class="lable" href="#TOP">&#8593;</a>
+	</p>
+</div>
+        <div id="txt"></div>
+    
+<!-- TOP OF PAGE -->
+<h1 id="TOP">
+	Konner Robbins
+</h1>
+        
+<!-- Tables with links (line 24-71) -->
+<table>
+	<tbody>
+		<tr style="font-size: 220%;">
+			<td>
+                <!-- Goes to Section 1 -->
+				<a class="lable" href="#S1">
+					ABOUT ME
+				</a>
+			</td>
+			<td>
+                <!-- Goes to Section 2 -->
+				<a class="lable" href="#S2">
+					HOBBIES
+				</a>
+			</td>
+			<td>
+                <!-- Goes to Section 3 -->
+				<a class="lable" href="#S3">
+					LIFE GOALS
+				</a>
+			</td>
+			<td>
+                <!-- Goes to Section 4 -->
+				<a class="lable" href="#S4">
+					FIELD REPORT
+				</a>
+			</td>
+			<td>
+                <!-- Goes to Section 5 -->
+				<a class="lable" href="#S5">
+					VIDEOS
+				</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+        
+<table>
+	<tbody>
+		<tr style="font-size: 220%;">
+			<td>
+                <!-- Like to Accessibility/Usability Page -->
+				<a class="lable" href="./accessibility.html">
+                    Accessibility/Usability Page
+				</a>
+			</td>
+			<td>
+                <!-- Link to LinkedIn profile -->
+				<a class="lable" href="https://www.linkedin.com/in/konner-robbins-961236162/">
+					LinkedIn
+				</a>
+			</td>
+            <td>
+                <!-- Link to Werewolf Name Generator -->
+				<a class="lable" href="./name_genarator.html">
+                    Werewolf Name Generator
+				</a>
+			</td>
+		</tr>
+	</tbody>
+</table>
+        
+<p>
+	<img class="me" style="width: 400px; height: 550px;" src="IMG_1075.jpg" alt="me flowing in the cold wind after graduation" />
+</p>
+        
+<!-- 1st SECTION "ABOUT ME" -->
+<h1 id="S1">
+	ABOUT ME
+</h1>
+        
+<div class="about">
+	<p style="font-size: 200%;">
+		I am currently a full-time college student at Florida Gulf Coast University. This is my first year attending FGCU and so far it has been a memorable experience. I tend to be a cheerful and positive person and I really like to joke around. You know what they say.. Laughter is the best medicine. I am what you call a dog person at heart and I will always be one. Dogs are the most loving and faithful companions. Dogs are always happy and have a pure heart and soul. I am currently majoring in Software Engineering. I chose this major because I was always interested in programming and coding. I took some engineering classes in high school and I found them very informative. I may not be as experienced as some others going into this major, but I won't let that stop me from continuing on this journey.
+	</p>
+</div>
+        
+<!-- 2nd SECTION "HOBBIES" -->
+<h1 id="S2">
+	HOBBIES
+</h1>
+        
+<div class="hobbies">
+	<p style="font-size: 220%; clear: right;">
+		<img class="dog" style="width: 400px; height: 500px;" src="IMG_0523.jpg" alt="me &amp; my dog" />
+		 I have always been a hands-on kind of a person. I used to draw sketches a lot when I was younger but now I do not do it as often. However, I like to design and modify drawings as I did as I was younger. I used to spray paint patterns and designs on items of mine that I felt were too plain. I was fortunate to have an older gentleman to teach me the skills of woodworking. he was a great mentor and taught me to be even more creative. I was fortunate enough to have worked with him for almost 2 years. Due to my mentor I gained inspiration for the future to design guitars or basses from old and abandon wood.
+	</p>
+</div>
+        
+<!-- 3rd SECTION "LIFE GOALS" -->
+<h1 id="S3">
+	LIFE GOALS
+</h1>
+        
+<div class="life">
+	<p style="font-size: 220%;">
+		<img class="guitar" style="width: 400px; height: 550px;" src="IMG_2484.jpg" alt="a custom guitar. a friend painted it"/>
+		 After graduation, I plan on finding a job as soon as possible. Once I do, I can start saving up for future expenses, such as a place of my own. I also want to give back to my parents for helping with so much by giving a portion of my income to them. When I do get a place of my own, I would like to bring my dog to live with me. I miss my dog Khleo and she is great company. My hopes is to find employmenr with a sucessful software company and on the side I would like to start marking guitars and basses as a hobby. This would provide additional income.
+	</p>
+</div>
+        
+<!-- 4th SECTION "FIELD REPORT" -->
+<h1 id="S4">
+	FIELD REPORT
+</h1>
+        
+<div class="field">
+    <!-- Code foe the Field Report PDF -->
+	<object data="Field_Report.pdf" width="1100" height="625">
+	</object>
+</div>
+        
+<!-- 5th SECTION "VIDEOS" -->
+<h1 id="S5">
+	VIDEOS
+</h1>
+        
+<div class="video">
+    <!-- The code for the video -->
+	<iframe src="https://www.youtube.com/embed/PNpxtl8KReg" width="520" height="445">
+	</iframe>
+</div>
+        
+        <!-- Scalable Ventor Graphics -->
+        <svg width="100" height="100">
+            <!-- edits for size/color of circle -->
+            <circle cx="50" cy="50" r="40" stroke="#66CC00" stroke-width="4" fill="green"/>
+            <!-- edits for letters in the Circle -->
+            <text fill="#ffff" font-size="35" font-family="Georgia, serif" x="15" y="62">KLR</text>
+        </svg>
+        <img class="img-circle" style="width: 90px; height: 90px;" src="IMG_4517.jpg"/>
+    </body> 
+</html>
