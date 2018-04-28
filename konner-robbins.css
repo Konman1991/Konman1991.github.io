@@ -1,7 +1,6 @@
   body {
     background-color: #272727;
     font-family: monospace;
-
 }
 
 /*table grid for lables*/
@@ -69,12 +68,14 @@ img {
     margin-bottom: 15px;
     display: block;
     width: 75%;
-    border: 6px solid #14A76C;
-   
+    border: 6px solid #14A76C;  
 }
+
 .img-circle {
+    float: right;
     border-radius: 100%;
 }
+
 .me {
     margin: auto;
     
